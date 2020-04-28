@@ -1,0 +1,241 @@
+/* EVERYTHING */
+
+html{scroll-behavior: smooth;}
+body{background-color:#f3ffe9;}
+
+p{
+    font-family: 'Open Sans' sans-serif;
+    font-size: 1.2rem;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 400;
+}
+
+.bgLeaf{
+    background-color: #50a534;
+    background-image: url('resources/bgPattern.png');
+    color: white;
+}
+
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.contactBtn{
+    color: rgba(255,255,255,.5);
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.contactBtn:hover{
+    color: rgba(255,255,255,.8);
+}
+
+.downShadow{
+    width:100%;
+    height:60px;
+    background-image:url('resources/downShadow.png');
+}
+
+.upShadow{
+    width:100%;
+    height:60px;
+    background-image:url('resources/upShadow.png');
+}
+
+.downCutaway{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 60px;
+    background-image:url('resources/downCutaway.png');
+}
+
+.upCutaway{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 60px;
+    background-image:url('resources/upCutaway.png');
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -71px;
+    visibility: hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 60px;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+.navbar-nav{
+    font-size: 1.2rem;
+}
+
+/* PRESENTATION */
+
+#presentation h1{
+    padding-top: 160px;
+    font-size: 2rem;
+}
+
+#presentation p{
+    padding-bottom: 60px;
+}
+
+/* STATISTIQUES */
+
+#statistiques{
+    margin: 50px 0 50px 0;
+    text-align: center;
+}
+
+#statistiques h2{
+    font-size: 1.8rem;
+    line-height: 50px;
+}
+
+#statistiques h3{
+    font-size: 1.4rem;
+    line-height: 40px;
+}
+
+.reference{
+    vertical-align:text-top;
+    margin-bottom: 5px;
+    display: inline-block;
+    background-image:url('resources/exclamationMark.png');
+    cursor: pointer;
+}
+
+.reference:hover{
+    background-image: url('resources/exclamationMarkHover.png');
+}
+
+h2 .reference{
+    width: 27px;
+    height: 27px;
+    background-size: 27px;
+}
+
+h3 .reference{
+    width: 23px;
+    height: 23px;
+    background-size: 23px;
+}
+
+/* OBJECTIF */
+
+#objectif h3{
+    margin: 40px 0 40px 0;
+}
+
+#objectif p{
+    margin: 40px 0 40px 0;
+}
+
+.logoVisee{
+    width: 150px;
+    height: 150px;
+    background-image: url('resources/logoVisee.png');
+    background-size: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.logoProcessus{
+    width: 150px;
+    height: 150px;
+    background-image: url('resources/logoProcessus.png');
+    background-size: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.logoEtudiant{
+    width: 150px;
+    height: 150px;
+    background-image: url('resources/logoEtudiant.png');
+    background-size: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.logoPersonnel{
+    width: 150px;
+    height: 150px;
+    background-image: url('resources/logoPersonnel.png');
+    background-size: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.bigNumber{
+    font-size: 2rem;
+}
+
+/* APPROCHES */
+
+.nav-pills .nav-link.active{
+    background-color: #50a534;
+}
+
+#approche h2{
+    margin: 40px 0 40px 0;
+}
+
+#approche .tab-pane{
+    padding-top: 40px;
+}
+
+#approche .tab-pane h3{
+    padding-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 1.5rem;
+    padding-bottom: 36px;
+}
+
+footer p{
+    font-size: 1.5rem;
+    margin: 60px 0 60px 0;
+}
+
+.arrowToTop{
+    display: block;
+    width: 52px;
+    height: 30px;
+    margin: 0 auto;
+    background-image:url('resources/arrowToTop.png');
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: white;
+}
+
+footer .license{
+    font-size: 1.2rem;
+}
