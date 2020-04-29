@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="resources/favicon.png">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -16,7 +17,11 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Projet <i>BienÊtre</i></a>
+        <a class="navbar-brand" href="#">
+        <picture>
+          <source media="(min-width: 336px)" srcset="resources/favicon.png" >
+          <img src="resources/empty.png" style="max-height:30px"> Projet <i>BienÊtre</i></a>
+        </picture>
       
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -64,8 +69,8 @@
       <a class="anchor" id="astatistiques"></a>
       <div class="container">
         <div class="row" style="min-height:320px">
-          <div class="col-md-12"><h2>Au Canada, environ une personne sur cinq aura développé une problématique de santé mentale avant l’âge de 25 ans
-            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019"></a></h2></div>
+          <div class="col-md-12"><h3>Au Canada, environ une personne sur cinq aura développé un problème de santé mentale avant l’âge de 25 ans
+            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019"></a></h3></div>
         </div>
         <div class="row" style="min-height:420px">
           <div class="col-md-6"><h3>Niveau de détresse psychologique selon l’âge
@@ -192,8 +197,68 @@
 
     <section id="potentiel">
     <a class="anchor" id="apotentiel"></a>
-    <div class="container text-center" style="height:940px;">
-      <h2>Initiatives potentielles</h2>
+    <div class="container">
+      <h2 class="text-center">Initiatives potentielles</h2>
+      <div class="row boxRow">
+        <div class="greenBox">
+          <ul>
+            <li>Espaces de méditation</li>
+            <li>Bancs sans écran ou banc social</li>
+            <li>Formation sur la gestion du stress</li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+        <picture>
+          <source media="(min-width: 770px)" srcset="resources/chill.png">
+          <source media="(min-width: 370px)" srcset="resources/chill-md.png">
+          <img src="resources/chill-sm.png" alt="relaxation">
+        </picture>
+      </div>
+      <div class="row boxRow">
+        <div class="greenBox">
+          <ul>
+            <li>Atelier bien-être et plein air</li>
+            <li>Atelier d'expression par l'art</li>
+            <li>Projet spécial pour les étudiants athlètes</li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+        <picture>
+          <source media="(min-width: 770px)" srcset="resources/camping.png">
+          <source media="(min-width: 370px)" srcset="resources/camping-md.png">
+          <img src="resources/camping-sm.png" alt="plein-air">
+        </picture>
+      </div>
+      <div class="row boxRow">
+        <div class="greenBox">
+          <ul>
+            <li>Application mobile de gestion du stress et de pleine conscience</li>
+            <li>Défis sur les réseaux sociaux</li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+        <picture>
+          <source media="(min-width: 770px)" srcset="resources/mobile.png">
+          <source media="(min-width: 370px)" srcset="resources/mobile-md.png">
+          <img src="resources/mobile-sm.png" alt="technologies mobiles">
+        </picture>
+      </div>
+      <div class="row boxRow">
+        <div class="greenBox">
+          <ul>
+            <li>Groupe de co-développement portant sur la culture universitaire de bienveillance</li>
+            <li>Programme de pairs aidants</li>
+            <li>Guide des bonnes pratiques pour les enseignants</li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+        <picture>
+          <source media="(min-width: 770px)" srcset="resources/network.png">
+          <source media="(min-width: 370px)" srcset="resources/network-md.png">
+          <img src="resources/network-sm.png" alt="réseautage">
+        </picture>
+      </div>
+
     </div>
     </section>
 
@@ -203,7 +268,7 @@
       <div class="upShadow" style="margin-bottom:45px"><span class="downCutaway"></span></div>
       <div class="container">
         <a href="#"><span class="arrowToTop"></span>Retour au sommet</a>
-        <p>Le projet <i>BienÊtre</i>, une initiative du Centre RBC d’expertise universitaire en santé mentale destiné aux enfants, adolescents et adolescents, et jeunes adultes</p>
+        <p>Le projet <i>BienÊtre</i>, une initiative du Centre RBC d’expertise universitaire en santé mentale destiné aux enfants, adolescents et jeunes adultes</p>
         <span class="license">© Développé par Raphaël Pion, 2020</span>
       </div>
     </footer>
@@ -212,7 +277,7 @@
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); /* activation des tooltips */  
       });
-      $('.navbar-nav>li').on('click', function(){
+      $('.navbar-nav>li').on('click', function(){ /* fermeture de la navbar lorsqu'un lien est cliqué */
       $('.navbar-collapse').collapse('hide');
     });
     </script>
