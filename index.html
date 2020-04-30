@@ -12,6 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="main.js"></script>
+    <script src="myCharts.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="71">
     <!-- NAVBAR -->
@@ -44,7 +47,7 @@
               <a class="nav-link" href="#apotentiel">Potentiel</a>
             </li>
             <li class="nav-item">
-                <span class="nav-link contactBtn">Contact</span>
+              <button type="button" class="btn contactBtn nav-link" data-toggle="modal" data-target="#contact">Contact</button>
             </li>
           </ul>
         </div>
@@ -68,25 +71,57 @@
     <section id="statistiques">
       <a class="anchor" id="astatistiques"></a>
       <div class="container">
+
         <div class="row" style="min-height:320px">
-          <div class="col-md-12"><h3>Au Canada, environ une personne sur cinq aura développé un problème de santé mentale avant l’âge de 25 ans
-            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019"></a></h3></div>
+
+          <div class="col-md-12">
+            <h3>Au Canada, environ une personne sur cinq aura développé un problème de santé mentale avant l’âge de 25 ans
+            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019"></a></h3>
+            <div class="stat1" style="width:100%;text-align:center">
+              <br><br>
+              <img src="resources/young1.png" alt="jeune">
+              <img src="resources/young2.png" alt="jeune">
+              <img src="resources/young3red.png" id="youngRed" alt="jeune">
+              <img src="resources/young4.png" alt="jeune">
+              <img src="resources/young5.png" alt="jeune"><br><br><br>
+            </div>
+          </div>
         </div>
+
         <div class="row" style="min-height:420px">
-          <div class="col-md-6"><h3>Niveau de détresse psychologique selon l’âge
-            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/bulletins/zoom-sante-201706-62.pdf" target="_blank" class="reference stat2" data-toggle="tooltip" data-placement="top" title="Bordeleau & Joubert, 2017"></a>
-          </h3></div>
-          <div class="col-md-6"><h3>Plus du tiers de la population étudiante collégiale affirme souffrir d’un haut niveau d’anxiété
-            <a href="https://www.erudit.org/fr/revues/ss/2017-v63-n1-ss03079/1040048ar/" target="_blank" class="reference stat3" data-toggle="tooltip" data-placement="top" title="Gosselin & Ducharme, 2017"></a>
-          </h3></div>
+
+          <div class="col-md-6">
+            <h3>Niveau de détresse psychologique selon l’âge
+            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/bulletins/zoom-sante-201706-62.pdf" target="_blank" class="reference stat2" data-toggle="tooltip" data-placement="top" title="Bordeleau & Joubert, 2017"></a></h3>
+            <br><canvas id="stat2" style="width:100%;height:400px"></canvas><br>
+          
         </div>
+
+          <div class="col-md-6">
+            <h3>Plus du tiers de la population étudiante collégiale affirme souffrir d’un haut niveau d’anxiété
+            <a href="https://www.erudit.org/fr/revues/ss/2017-v63-n1-ss03079/1040048ar/" target="_blank" class="reference stat3" data-toggle="tooltip" data-placement="top" title="Gosselin & Ducharme, 2017"></a></h3>
+            <br><canvas id="stat3" style="width:100%;"></canvas><br>
+          </div>
+        </div>
+
+        <br><br>
+
         <div class="row" style="min-height:420px">
-          <div class="col-md-6"><h3>Proportion d’étudiants universitaires à vivre un niveau élevé de détresse psychologique
-            <a href="https://www.ledevoir.com/societe/sante/567329/beaucoup-de-detresse-psychologique-chez-les-etudiants-quebecois-selon-une-etude" target="_blank" class="reference stat4" data-toggle="tooltip" data-placement="top" title="UEQ, 2019"></a>
-          </h3></div>
-          <div class="col-md-6"><h3>Augmentation de la proportion des jeunes du secondaire se situant au niveau élevé de détresse psychologique
-            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/enfants-ados/adaptation-sociale/sante-jeunes-secondaire-2016-2017-t2.pdf" target="_blank" class="reference stat5" data-toggle="tooltip" data-placement="top" title="Traoré et al., 2016-2017"></a>
-          </h3></div>
+
+          <div class="col-md-6">
+            <h3>Proportion d’étudiants universitaires à vivre un niveau élevé de détresse psychologique
+            <a href="https://www.ledevoir.com/societe/sante/567329/beaucoup-de-detresse-psychologique-chez-les-etudiants-quebecois-selon-une-etude" target="_blank" class="reference stat4" data-toggle="tooltip" data-placement="top" title="UEQ, 2019"></a></h3>
+            <br><div id="stat4" style="width:100%;"><span class="statNumber">58%</span><br><br>
+              <img src="resources/hardstudy.png" style="width:75%">
+            </div><br><br>
+        </div>
+
+          <div class="col-md-6">
+            <h3>Augmentation de la proportion des jeunes du secondaire se situant au niveau élevé de détresse psychologique
+            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/enfants-ados/adaptation-sociale/sante-jeunes-secondaire-2016-2017-t2.pdf" target="_blank" class="reference stat5" data-toggle="tooltip" data-placement="top" title="Traoré et al., 2016-2017"></a></h3>
+            <br><canvas id="stat5" style="width:100%;"></canvas>
+        </div>
+
         </div>
       </div>
     </section>
@@ -273,13 +308,48 @@
       </div>
     </footer>
 
+    <!-- CONTACT -->
+    <div class="modal" id="contact">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Contact Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Nous joindre</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <span class="person"></span> Félix Guay-Dufour<br>
+                <span class="role"></span> Coordonateur du projet<br>
+                <span class="email"></span> <a href="mailto:Felix.Guay-Dufour@usherbrooke.ca">Felix.Guay-Dufour@usherbrooke.ca</a><br>
+                <span class="phone"></span> 819-821-8000 poste 62581
+              </div>
+              <div class="col-md-6">
+                <span class="person"></span> Julie Lane<br>
+                <span class="role"></span> Directrice du Centre RBC<br>
+                <span class="email"></span> <a href="mailto:Julie.Lane@usherbrooke.ca">Julie.Lane@usherbrooke.ca</a><br>
+                <span class="phone"></span> 819-821-8000 poste 65960
+              </div>
+            </div>
+          </div>
+    
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Fermer</button>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
     <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); /* activation des tooltips */  
-      });
-      $('.navbar-nav>li').on('click', function(){ /* fermeture de la navbar lorsqu'un lien est cliqué */
-      $('.navbar-collapse').collapse('hide');
-    });
+        $('.navbar-nav>li').on('click', function(){ /* fermeture de la navbar lorsqu'un lien est cliqué */
+        $('.navbar-collapse').collapse('hide');
+        });
     </script>
 
 </body>
