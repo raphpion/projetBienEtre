@@ -351,3 +351,7 @@ footer .license{
     background-size: 100%;
     display: inline-block;
 }
+
+.modal-body{
+    padding-left:25px;
+}
