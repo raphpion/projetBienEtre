@@ -28,6 +28,10 @@ let agedDistress = new Chart(stat2, {
         tooltips:{enabled:false},
         scales: {
             yAxes: [{
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Proportion (%)'
+                  },
                 ticks: {
                     beginAtZero: true
                 }
@@ -39,7 +43,7 @@ let agedDistress = new Chart(stat2, {
 let collegeAnxiety = new Chart(stat3, {
     type: 'doughnut',
     data:{
-        labels:['highAnxiety', 'notHighAnxiety'],
+        labels:["Haut niveau d'anxiété", 'Autres'],
         datasets:[{
             label:'Proportion',
             data:[35.1, 64.9],
@@ -52,7 +56,7 @@ let collegeAnxiety = new Chart(stat3, {
         }]
     },
     options:{
-        legend:{display:false},
+        legend:{display:true},
         tooltips:{enabled:false}
     }
 });
@@ -86,7 +90,11 @@ let distressIncrease = new Chart(stat5, {
                 ticks: {
                     beginAtZero: true,
                     max:40
-                }
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Proportion (%)'
+                  }
             }]
         }
     }
