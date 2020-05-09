@@ -3,6 +3,10 @@
 html{scroll-behavior: smooth;}
 body{background-color:#f3ffe9;}
 
+h2{
+    font-size: 2.4rem;
+}
+
 p{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
@@ -75,6 +79,12 @@ a.anchor {
     visibility: hidden;
 }
 
+@media screen and (max-width: 767px){
+    .col-md-6{
+        margin-bottom: 60px;
+    }
+}
+
 /* NAVBAR */
 
 .navbar{
@@ -84,7 +94,7 @@ a.anchor {
 }
 
 .navbar-brand{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .navbar-nav{
@@ -110,8 +120,8 @@ a.anchor {
 }
 
 #statistiques h2{
-    font-size: 1.8rem;
     line-height: 50px;
+    font-size: 1.8rem;
 }
 
 #statistiques h3{
@@ -158,10 +168,27 @@ h3 .reference{
     -o-transition: 1s;
 }
 
+.stat3 img{
+    width: 20%;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.graph5{
+    padding: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
 /* OBJECTIF */
 
-#objectif h3{
-    margin: 40px 0 40px 0;
+#objectif h4{
+    margin: 0 0 40px 0;
 }
 
 #objectif p{
@@ -171,7 +198,7 @@ h3 .reference{
 .logoVisee{
     width: 150px;
     height: 150px;
-    background-image: url('resources/logoVisee.png');
+    background-image: url('resources/logo-visee.png');
     background-size: 150px;
     margin: 0 auto;
     display: block;
@@ -189,7 +216,7 @@ h3 .reference{
 .logoEtudiant{
     width: 150px;
     height: 150px;
-    background-image: url('resources/logoEtudiant.png');
+    background-image: url('resources/logo-etudiant.png');
     background-size: 150px;
     margin: 0 auto;
     display: block;
@@ -198,7 +225,7 @@ h3 .reference{
 .logoPersonnel{
     width: 150px;
     height: 150px;
-    background-image: url('resources/logoPersonnel.png');
+    background-image: url('resources/logo-personnel.png');
     background-size: 150px;
     margin: 0 auto;
     display: block;
@@ -207,6 +234,26 @@ h3 .reference{
 .bigNumber{
     font-size: 3rem;
     text-shadow: 1px 2px grey;
+}
+
+.ecoles{
+    margin: 0 0 60px 0;
+    padding: 0;
+}
+
+.ecoles img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-size: 100%;
+    display: inline-block;
+    margin: 0 2%;
+    padding: 0;
+    width: 14%;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px black;
 }
 
 /* APPROCHES */
@@ -337,7 +384,7 @@ footer{
 }
 
 footer p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 60px 0 60px 0;
 }
 
