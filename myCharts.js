@@ -1,7 +1,7 @@
 $(document).ready(function(){
 let stat2 = document.getElementById('stat2').getContext('2d');
 // let stat3 = document.getElementById('stat3').getContext('2d');
-// let stat5 = document.getElementById('stat5').getContext('2d');
+let stat5 = document.getElementById('stat5').getContext('2d');
 
 let agedDistress = new Chart(stat2, {
     type: 'bar',
@@ -61,45 +61,46 @@ let agedDistress = new Chart(stat2, {
 //     }
 // });
 
-// let distressIncrease = new Chart(stat5, {
-//     type: 'bar',
-//     data:{
-//         labels:['', '2011', '2017', ''],
-//         datasets:[{
-//             label:'Proportion',
-//             data:[0, 21, 29, 0],
-//             backgroundColor:[
-//                 'rgba(0, 0, 0, 0)',
-//                 'rgba(255, 217, 102, 0.6)',
-//                 'rgba(197, 90, 17, 0.6)',
-//                 'rgba(0, 0, 0, 0)'
-//             ],
-//             borderWidth:1,
-//             borderColor:['rgba(0, 0, 0, 0)', '#ffd966', '#c55a11', 'rgba(0, 0, 0, 0)']
-//         }, {
-//         label:'Tendance',
-//         type: 'line',
-//         data:[undefined, 21, 29, undefined],
-//         steppedLine: true,
-//         backgroundColor:['rgba(0,0,0, 0)'],
-//         }]
-//     },
-//     options:{
-//         legend:{display:false},
-//         tooltips:{enabled:false},
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true,
-//                     max:40
-//                 },
-//                 scaleLabel: {
-//                     display: true,
-//                     labelString: 'Proportion (%)'
-//                   }
-//             }]
-//         }
-//     }
-// })
+let distressIncrease = new Chart(stat5, {
+    type: 'bar',
+    data:{
+        labels:['', '2011', '2017', ''],
+        datasets:[{
+            label:'Proportion',
+            data:[0, 21, 29, 0],
+            backgroundColor:[
+                'rgba(0, 0, 0, 0)',
+                'rgba(255, 217, 102, 0.6)',
+                'rgba(197, 90, 17, 0.6)',
+                'rgba(0, 0, 0, 0)'
+            ],
+            borderWidth:1,
+            borderColor:['rgba(0, 0, 0, 0)', '#ffd966', '#c55a11', 'rgba(0, 0, 0, 0)']
+        }, {
+        label:'Tendance',
+        type: 'line',
+        data:[14, 21, 29, 35],
+        steppedLine: 'middle',
+        backgroundColor:['rgba(0,0,0, 0)'],
+        borderColor: '#c55a11'
+        }]
+    },
+    options:{
+        legend:{display:false},
+        tooltips:{enabled:false},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max:40
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Proportion (%)'
+                  }
+            }]
+        }
+    }
+})
 
 });
