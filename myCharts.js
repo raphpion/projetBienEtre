@@ -64,10 +64,11 @@ let agedDistress = new Chart(stat2, {
 let distressIncrease = new Chart(stat5, {
     type: 'bar',
     data:{
+        // plugins: [ChartDataLabels],
         labels:['', '2011', '2017', ''],
         datasets:[{
             label:'Proportion',
-            data:[0, 21, 29, 0],
+            data:[undefined, 21, 29, undefined],
             backgroundColor:[
                 'rgba(0, 0, 0, 0)',
                 'rgba(255, 217, 102, 0.6)',
@@ -75,7 +76,10 @@ let distressIncrease = new Chart(stat5, {
                 'rgba(0, 0, 0, 0)'
             ],
             borderWidth:1,
-            borderColor:['rgba(0, 0, 0, 0)', '#ffd966', '#c55a11', 'rgba(0, 0, 0, 0)']
+            borderColor:['rgba(0, 0, 0, 0)', '#ffd966', '#c55a11', 'rgba(0, 0, 0, 0)'],
+            datalabels: {
+                color: '#36A2EB'
+            }
         }, {
         label:'Tendance',
         type: 'line',
@@ -83,6 +87,9 @@ let distressIncrease = new Chart(stat5, {
         steppedLine: 'middle',
         backgroundColor:['rgba(0,0,0, 0)'],
         borderColor: '#c55a11'
+        // datalabels: {
+        //     display: 'none'
+        // }
         }]
     },
     options:{
