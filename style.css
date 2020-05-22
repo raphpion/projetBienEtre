@@ -149,8 +149,6 @@ a.anchor {
     display: inline-block;
     background-image:url('resources/exclamationMark.png');
     cursor: pointer;
-    overflow: hidden;
-    line-height: 9999;
 }
 
 .reference:hover{
