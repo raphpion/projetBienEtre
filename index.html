@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un projet innovant de promotion de la santé psychologique et du bien-être de la communauté étudiante de l’Estrie">
     <title>Projet Santé Psy</title>
+    <meta name="description" content="Un projet innovant de promotion de la santé psychologique et du bien-être de la communauté étudiante de l’Estrie">
+    <meta property="og:title" content="Projet Santé Psy" />
+    <meta property="og:description" content="Un projet innovant de promotion de la santé psychologique et du bien-être de la communauté étudiante de l’Estrie">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://projetsantepsy.raphaelpion.com" /> <!-- ICI REMPLACER L'URL PAR L'URL QUE VOUS UTILISEREZ -->
+    <meta property="og:image" content="resources/favicon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,7 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script> -->
     <script src="main.js"></script>
     <script src="myCharts.js"></script>
 </head>
@@ -23,12 +27,12 @@
         <!-- Brand -->
         <a class="navbar-brand" href="#">
         <picture>
-          <source media="(min-width: 336px)" srcset="resources/favicon.png" >
-          <img src="resources/empty.png" style="max-height:24px"> Projet <i>Santé Psy</i></a>
+          <source media="(min-width: 336px)" srcset="resources/favicon.png" alt="logo">
+          <img src="resources/empty.png" style="max-height:24px" alt="logo"> Projet <i>Santé Psy</i></a>
         </picture>
       
         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" name="mobile-menu" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
       
@@ -77,7 +81,7 @@
 
           <div class="col-md-12">
             <h3>Au Canada, environ une personne sur cinq aura développé un problème de santé mentale avant l’âge de 25 ans
-            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019"></a></h3>
+            <a href="https://www.mentalhealthcommission.ca/Francais/ce-que-nous-faisons/enfants-et-jeunes" target="_blank" class="reference stat1" data-toggle="tooltip" data-placement="top" title="Commission de la santé mentale du Canada, 2019">Source : Commission de la santé mentale du Canada, 2019</a></h3>
             <div class="stat1" style="width:100%;text-align:center">
               <br><br>
               <img src="resources/young1.png" alt="jeune">
@@ -93,24 +97,24 @@
         
           <div class="col-md-6">
             <h3>Niveau de détresse psychologique selon l’âge
-            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/bulletins/zoom-sante-201706-62.pdf" target="_blank" class="reference stat2" data-toggle="tooltip" data-placement="top" title="Bordeleau & Joubert, 2017"></a></h3>
+            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/bulletins/zoom-sante-201706-62.pdf" target="_blank" class="reference stat2" data-toggle="tooltip" data-placement="top" title="Bordeleau & Joubert, 2017">Source : Bordeleau & Joubert, 2017</a></h3>
             <br><canvas id="stat2" style="width:100%;height:400px"></canvas><br>
           
         </div>
 
           <div class="col-md-6">
             <h3>Plus du tiers de la population étudiante collégiale affirme souffrir d’un haut niveau d’anxiété
-            <a href="https://www.erudit.org/fr/revues/ss/2017-v63-n1-ss03079/1040048ar/" target="_blank" class="reference stat3" data-toggle="tooltip" data-placement="top" title="Gosselin & Ducharme, 2017"></a></h3>
+            <a href="https://www.erudit.org/fr/revues/ss/2017-v63-n1-ss03079/1040048ar/" target="_blank" class="reference stat3" data-toggle="tooltip" data-placement="top" title="Gosselin & Ducharme, 2017">Source : Gosselin & Ducharme, 2017</a></h3>
             <!-- <br><canvas id="stat3" style="width:100%;"></canvas><br> -->
             <div class="stat3" style="width:100%;text-align:center"><br>
               <img src="resources/student-desk.png" alt="Étudiant">
-              <img src="resources/student-desk-red.png" alt="Étudiant" class="studentRed">
+              <img src="resources/student-desk-red.png" alt="Étudiant rouge" class="studentRed">
               <img src="resources/student-desk.png" alt="Étudiant"><br>
               <img src="resources/student-desk.png" alt="Étudiant">
-              <img src="resources/student-desk-red.png" alt="Étudiant" class="studentRed">
+              <img src="resources/student-desk-red.png" alt="Étudiant rouge" class="studentRed">
               <img src="resources/student-desk.png" alt="Étudiant"><br>
               <img src="resources/student-desk.png" alt="Étudiant">
-              <img src="resources/student-desk-red.png" alt="Étudiant" class="studentRed">
+              <img src="resources/student-desk-red.png" alt="Étudiant rouge" class="studentRed">
               <img src="resources/student-desk.png" alt="Étudiant">
             </div>
           </div>
@@ -122,15 +126,15 @@
 
           <div class="col-md-6">
             <h3>Proportion d’étudiants universitaires à vivre un niveau élevé de détresse psychologique
-            <a href="https://www.ledevoir.com/societe/sante/567329/beaucoup-de-detresse-psychologique-chez-les-etudiants-quebecois-selon-une-etude" target="_blank" class="reference stat4" data-toggle="tooltip" data-placement="top" title="UEQ, 2019"></a></h3>
+            <a href="https://www.ledevoir.com/societe/sante/567329/beaucoup-de-detresse-psychologique-chez-les-etudiants-quebecois-selon-une-etude" target="_blank" class="reference stat4" data-toggle="tooltip" data-placement="top" title="UEQ, 2019">Source : UEQ, 2019</a></h3>
             <br><div id="stat4" style="width:100%;"><span class="statNumber">58%</span><br><br>
-              <img src="resources/livres_gif1.gif" style="width:75%">
+              <img src="resources/livres_gif1.gif" alt="Étudiant surchargé" style="width:75%">
             </div><br><br>
         </div>
 
           <div class="col-md-6">
             <h3>Augmentation de la proportion des jeunes du secondaire se situant au niveau élevé de détresse psychologique
-            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/enfants-ados/adaptation-sociale/sante-jeunes-secondaire-2016-2017-t2.pdf" target="_blank" class="reference stat5" data-toggle="tooltip" data-placement="top" title="Traoré et al., 2016-2017"></a></h3>
+            <a href="https://www.stat.gouv.qc.ca/statistiques/sante/enfants-ados/adaptation-sociale/sante-jeunes-secondaire-2016-2017-t2.pdf" target="_blank" class="reference stat5" data-toggle="tooltip" data-placement="top" title="Traoré et al., 2016-2017">Source : Traoré et al., 2016-2017</a></h3>
             <br><canvas id="stat5" style="width:100%;"></canvas>
             <!-- <div class="stat5">
               <img src="resources/stat5.png" style="width: 80%"> 
